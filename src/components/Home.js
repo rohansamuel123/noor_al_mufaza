@@ -1,37 +1,25 @@
 import { motion } from "framer-motion";
-import "../App.css"; // Ensure Tailwind CSS is imported
+import { useState } from "react"; // NEW
+import "../App.css"; 
+import { Link } from "react-router-dom"; 
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // NEW
+
   const services = [
-    {
-      title: "Fit-out",
-      image: "/images/fitout.jpg"
-    },
-    {
-      title: "MEP",
-      image: "/images/mep.jpg"
-    },
-    {
-      title: "Glass and Aluminium Installation",
-      image: "/images/glass-aluminium.jpg"
-    },
-    {
-      title: "Painting",
-      image: "/images/painting.jpg"
-    },
-    {
-      title: "Floor and Wall Tiling",
-      image: "/images/tiling.jpg"
-    },
-    {
-      title: "Carpentry and Wood Works",
-      image: "/images/carpentry.jpg"
-    }
+    { title: "Fit-out", image: "/images/fitout.jpg" },
+    { title: "MEP", image: "/images/mep.jpg" },
+    { title: "Glass and Aluminium Installation", image: "/images/glass-aluminium.jpg" },
+    { title: "Painting", image: "/images/painting.jpg" },
+    { title: "Floor and Wall Tiling", image: "/images/tiling.jpg" },
+    { title: "Carpentry and Wood Works", image: "/images/carpentry.jpg" }
   ];
 
   return (
-    <div className="min-h-screen bg-white text-[#001362] font-sans scroll-smooth">
-      <header className="flex items-center justify-between p-6 shadow-md bg-[#e3ecfa]">
+    <div className="min-h-screen flex flex-col bg-white text-[#001362] font-sans scroll-smooth">
+      
+      {/* Header */}
+      <header className="flex items-center justify-between p-6 shadow-md bg-[#e3ecfa] relative">
         <div className="flex items-center space-x-3">
           <img src="/logo.png" alt="Noor A Mufaza Logo" className="h-12 w-12 object-contain" />
           <div>
@@ -39,11 +27,38 @@ export default function Home() {
             <p className="text-sm text-[#001362]">Technical Services LLC</p>
           </div>
         </div>
+
+        {/* Desktop Nav */}
         <nav className="space-x-6 hidden md:flex">
           <a href="#services" className="hover:text-[#eaaf47] transition">Services</a>
           <a href="#about" className="hover:text-[#eaaf47] transition">About</a>
           <a href="#contact" className="hover:text-[#eaaf47] transition">Contact</a>
         </nav>
+
+        {/* Hamburger Menu */}
+        <button className="md:hidden focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <svg className="w-8 h-8 text-[#001362]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            {isMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /> // X icon
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /> // Hamburger
+            )}
+          </svg>
+        </button>
+
+        {/* Mobile Dropdown */}
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-full right-6 mt-2 w-40 bg-white rounded-lg shadow-lg flex flex-col items-start p-4 space-y-2 z-50"
+          >
+            <a href="#services" className="w-full text-left hover:text-[#eaaf47] transition" onClick={() => setIsMenuOpen(false)}>Services</a>
+            <a href="#about" className="w-full text-left hover:text-[#eaaf47] transition" onClick={() => setIsMenuOpen(false)}>About</a>
+            <a href="#contact" className="w-full text-left hover:text-[#eaaf47] transition" onClick={() => setIsMenuOpen(false)}>Contact</a>
+          </motion.div>
+        )}
       </header>
 
       <motion.section
@@ -88,9 +103,11 @@ export default function Home() {
       <section id="contact" className="py-20 px-6 bg-[#fff4db] text-center">
         <h3 className="text-3xl font-semibold text-[#001362] mb-6">Contact Us</h3>
         <p className="mb-4 text-[#001362]">We’d love to hear from you. Reach out for a free consultation or service quote.</p>
-        <button className="bg-[#001362] text-white px-6 py-3 rounded-full hover:bg-blue-800 transition duration-300">
-          Get in Touch
-        </button>
+        <Link to="/contact-details">
+          <button className="bg-[#001362] text-white px-6 py-3 rounded-full hover:bg-blue-800 transition duration-300">
+            Get in Touch
+          </button>
+        </Link>
       </section>
 
       <footer className="bg-[#001362] text-white text-center p-4">
