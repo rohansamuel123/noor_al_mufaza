@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home page -->
+  <url>
+    <loc>https://nooralmufaza.netlify.app/</loc>
+    <lastmod>2025-04-27</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Services page -->
+  <url>
+    <loc>https://nooralmufaza.netlify.app/#services</loc>
+    <lastmod>2025-04-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- About page -->
+  <url>
+    <loc>https://nooralmufaza.netlify.app/#about</loc>
+    <lastmod>2025-04-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact page -->
+  <url>
+    <loc>https://nooralmufaza.netlify.app/#contact</loc>
+    <lastmod>2025-04-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact details page -->
+  <url>
+    <loc>https://nooralmufaza.netlify.app/contact-details</loc>
+    <lastmod>2025-04-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import { useState } from "react"; // NEW
 import "../App.css"; 
 import { Link } from "react-router-dom"; 
@@ -17,7 +18,35 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-[#001362] font-sans scroll-smooth">
-      
+      <Helmet>
+        <title>Noor Al Mufaza Technical Services</title>
+        <meta name="description" content="Noor Al Mufaza offers top-tier technical and interior services including fit-out, MEP, painting, tiling, and carpentry." />
+        <meta name="keywords" content="Noor Al Mufaza, technical services, interior maintenance, MEP, fit-out, carpentry" />
+      </Helmet>
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Noor Al Mufaza Technical Services",
+              "url": "https://www.nooralmufaza.netlify.app",
+              "logo": "https://www.nooralmufaza.netlify.app/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+971 545933287",
+                "contactType": "Customer Service",
+                "areaServed": "AE",
+                "availableLanguage": "English"
+              },
+              "sameAs": [
+                "https://www.instagram.com/nooralmufaza",
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+ 
       {/* Header */}
       <header className="flex items-center justify-between p-6 shadow-md bg-[#e3ecfa] relative">
         <div className="flex items-center space-x-3">

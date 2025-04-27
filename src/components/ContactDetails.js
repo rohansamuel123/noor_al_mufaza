@@ -3,59 +3,65 @@ import { motion } from "framer-motion";
 
 export default function ContactDetails() {
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-white text-[#001362] font-sans">
+    <div className="min-h-screen flex flex-col bg-white text-[#001362] font-sans scroll-smooth">
+      
       {/* Header */}
       <header className="flex items-center justify-between p-6 shadow-md bg-[#e3ecfa]">
         <div className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Noor Al Mufaza Logo" className="h-12 w-12 object-contain" />
+          <img src="/logo.png" alt="Noor A Mufaza Logo" className="h-12 w-12 object-contain" />
           <div>
             <h1 className="text-2xl font-bold">Noor Al Mufaza</h1>
             <p className="text-sm text-[#001362]">Technical Services LLC</p>
           </div>
         </div>
-        <nav className="space-x-6 hidden md:flex">
+        <nav className="hidden md:flex space-x-6">
           <Link to="/" className="hover:text-[#eaaf47] transition">Home</Link>
-          <a href="#services" className="hover:text-[#eaaf47] transition">Services</a>
-          <a href="#about" className="hover:text-[#eaaf47] transition">About</a>
         </nav>
       </header>
 
-      {/* Main Content */}
-      <main className="flex-grow flex flex-col items-center justify-center text-center py-16 px-6 bg-gradient-to-br from-[#e3ecfa] via-white to-[#fff8eb]">
+      {/* Main Contact Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="flex-grow flex flex-col items-center justify-center text-center py-20 px-6 bg-gradient-to-br from-[#e3ecfa] via-white to-[#fff8eb]"
+      >
         <h2 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
-        <p className="text-lg md:text-xl mb-8 max-w-2xl">
-          We're here to help with all your technical service needs. Reach out to us!
+        <p className="text-lg md:text-xl max-w-xl mb-8">
+          We'd love to hear from you! Contact us for any service inquiries, consultations, or quotes.
         </p>
 
-        <div className="bg-[#e3ecfa] rounded-2xl shadow-lg p-8 w-full max-w-md mx-auto text-left space-y-4">
+        <div className="w-full max-w-2xl bg-white p-8 rounded-2xl shadow-lg grid gap-6 text-left text-[#001362]">
           <div>
-            <h3 className="text-xl font-bold text-[#eaaf47] mb-2">Phone Numbers</h3>
-            <p className="text-[#001362]">+971 54 593 3287</p>
-            <p className="text-[#001362]">+971 58 147 3035</p>
+            <h4 className="text-lg font-semibold mb-1">Phone Numbers:</h4>
+            <p className="hover:text-[#eaaf47] transition">
+              <a href="tel:+971501234567">+971 54 593 3287</a>
+            </p>
+            <p className="hover:text-[#eaaf47] transition">
+              <a href="tel:+971559876543">+971 58 147 3035</a>
+            </p>
           </div>
           <div>
-            <h3 className="text-xl font-bold text-[#eaaf47] mb-2">Email</h3>
-            <p className="text-[#001362]">nooralmufaza@gmail.com</p>
+            <h4 className="text-lg font-semibold mb-1">Email:</h4>
+            <p className="hover:text-[#eaaf47] transition">
+              <a href="mailto:nooralmufaza@gmail.com">nooralmufaza@gmail.com</a>
+            </p>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-1">Office Location:</h4>
+            <p>Dubai, United Arab Emirates</p>
           </div>
         </div>
 
-        {/* Back to Home Button */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          <Link
-            to="/"
-            className="mt-8 inline-block bg-[#001362] text-white px-8 py-3 rounded-full hover:bg-blue-800 transition relative overflow-hidden"
-          >
-            <span className="relative z-10">Back to Home</span>
-            <span className="absolute inset-0 rounded-full bg-[#eaaf47] opacity-0 hover:opacity-20 transition"></span>
-          </Link>
-        </motion.div>
-      </main>
+        <Link to="/" className="mt-10">
+          <button className="bg-[#001362] text-white px-6 py-3 rounded-full hover:bg-blue-800 transition duration-300">
+            Back to Home
+          </button>
+        </Link>
+      </motion.section>
 
       {/* Footer */}
-      <footer className="bg-[#001362] text-white text-center p-4">
+      <footer className="bg-[#001362] text-white text-center p-4 mt-auto">
         <p>&copy; {new Date().getFullYear()} Noor Al Mufaza Technical Services LLC. All rights reserved.</p>
       </footer>
     </div>
