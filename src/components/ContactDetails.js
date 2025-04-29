@@ -1,14 +1,44 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 
 export default function ContactDetails() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-[#001362] font-sans scroll-smooth">
+      <Helmet>
+        <title>Stretch Ceiling, Fitout, Renovation, Landscaping Services Dubai | Noor Al Mufaza</title>
+        <meta name="description" content="Contact Noor Al Mufaza for expert renovation, fitout, landscaping, and MEP services in Dubai." />
+        <meta name="keywords" content="Noor Al Mufaza, technical services, interior maintenance, stretch ceiling Dubai, fitout contractors Dubai, home renovation Dubai, kitchen renovation Dubai, bathroom renovation Dubai, MEP services Dubai, landscaping Dubai, garden renovation Dubai, tiling services Dubai, plumbing services Dubai, wooden flooring Dubai, custom cabinets Dubai" />
+        <link rel="canonical" href="https://www.nooralmufaza.com/contact" />
+      </Helmet>
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Noor Al Mufaza Technical Services",
+              "url": "https://www.nooralmufaza.com",
+              "logo": "https://www.nooralmufaza.com/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+971 545933287",
+                "contactType": "Customer Service",
+                "areaServed": "AE",
+                "availableLanguage": "English"
+              },
+              "sameAs": [
+                "https://www.instagram.com/nooralmufaza"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
       
       {/* Header */}
       <header className="flex items-center justify-between p-6 shadow-md bg-[#e3ecfa]">
         <div className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Noor A Mufaza Logo" className="h-12 w-12 object-contain" />
+          <img src="/logo.png" alt="Noor Al Mufaza Logo" className="h-12 w-12 object-contain" />
           <div>
             <h1 className="text-2xl font-bold">Noor Al Mufaza</h1>
             <p className="text-sm text-[#001362]">Technical Services LLC</p>
@@ -35,10 +65,10 @@ export default function ContactDetails() {
           <div>
             <h4 className="text-lg font-semibold mb-1">Phone Numbers:</h4>
             <p className="hover:text-[#eaaf47] transition">
-              <a href="tel:+971501234567">+971 54 593 3287</a>
+              <a href="tel:+971545933287">+971 54 593 3287</a>
             </p>
             <p className="hover:text-[#eaaf47] transition">
-              <a href="tel:+971559876543">+971 58 147 3035</a>
+              <a href="tel:+971581473035">+971 58 147 3035</a>
             </p>
           </div>
           <div>
@@ -53,7 +83,15 @@ export default function ContactDetails() {
           </div>
         </div>
 
-        <Link to="/" className="mt-10">
+        {/* Instagram Button */}
+        <a href="https://www.instagram.com/nooralmufaza" target="_blank" rel="noopener noreferrer" className="mt-8">
+          <button className="bg-[#eaaf47] text-[#001362] px-6 py-3 rounded-full hover:bg-yellow-500 transition duration-300">
+            Visit our Instagram
+          </button>
+        </a>
+
+        {/* Back to Home Button */}
+        <Link to="/" className="mt-6">
           <button className="bg-[#001362] text-white px-6 py-3 rounded-full hover:bg-blue-800 transition duration-300">
             Back to Home
           </button>

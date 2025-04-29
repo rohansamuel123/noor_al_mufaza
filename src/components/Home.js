@@ -19,9 +19,10 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-[#001362] font-sans scroll-smooth">
       <Helmet>
-        <title>Noor Al Mufaza Technical Services</title>
-        <meta name="description" content="Noor Al Mufaza offers top-tier technical and interior services including fit-out, MEP, painting, tiling, and carpentry." />
-        <meta name="keywords" content="Noor Al Mufaza, technical services, interior maintenance, MEP, fit-out, carpentry" />
+        <title>Stretch Ceiling, Fitout, Renovation, Landscaping Services Dubai | Noor Al Mufaza</title>
+        <meta name="description" content="Noor Al Mufaza provides expert services in stretch ceiling installation, fitout, MEP, plumbing, painting, tiling, kitchen and bathroom renovation, landscaping, and wooden flooring in Dubai. Contact us for premium renovation solutions." />
+        <meta name="keywords" content="Noor Al Mufaza, technical services, interior maintenance, stretch ceiling Dubai, fitout contractors Dubai, home renovation Dubai, kitchen renovation Dubai, bathroom renovation Dubai, MEP services Dubai, landscaping Dubai, garden renovation Dubai, tiling services Dubai, plumbing services Dubai, wooden flooring Dubai, custom cabinets Dubai" />
+        <link rel="canonical" href="https://www.nooralmufaza.com" />
       </Helmet>
       <Helmet>
         <script type="application/ld+json">
@@ -30,8 +31,8 @@ export default function Home() {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Noor Al Mufaza Technical Services",
-              "url": "https://www.nooralmufaza.netlify.app",
-              "logo": "https://www.nooralmufaza.netlify.app/logo.png",
+              "url": "https://www.nooralmufaza.com",
+              "logo": "https://www.nooralmufaza.com/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+971 545933287",
@@ -61,7 +62,7 @@ export default function Home() {
         <nav className="space-x-6 hidden md:flex">
           <a href="#services" className="hover:text-[#eaaf47] transition">Services</a>
           <a href="#about" className="hover:text-[#eaaf47] transition">About</a>
-          <a href="#contact" className="hover:text-[#eaaf47] transition">Contact</a>
+          <a href="/contact-details" className="hover:text-[#eaaf47] transition">Contact</a>
         </nav>
 
         {/* Hamburger Menu */}
@@ -85,7 +86,7 @@ export default function Home() {
           >
             <a href="#services" className="w-full text-left hover:text-[#eaaf47] transition" onClick={() => setIsMenuOpen(false)}>Services</a>
             <a href="#about" className="w-full text-left hover:text-[#eaaf47] transition" onClick={() => setIsMenuOpen(false)}>About</a>
-            <a href="#contact" className="w-full text-left hover:text-[#eaaf47] transition" onClick={() => setIsMenuOpen(false)}>Contact</a>
+            <a href="/contact-details" className="w-full text-left hover:text-[#eaaf47] transition" onClick={() => setIsMenuOpen(false)}>Contact</a>
           </motion.div>
         )}
       </header>
