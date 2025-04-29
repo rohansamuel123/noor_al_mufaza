@@ -8,7 +8,7 @@ export default function ContactDetails() {
       <Helmet>
         <title>Stretch Ceiling, Fitout, Renovation, Landscaping Services Dubai | Noor Al Mufaza</title>
         <meta name="description" content="Contact Noor Al Mufaza for expert renovation, fitout, landscaping, and MEP services in Dubai." />
-        <meta name="keywords" content="Noor Al Mufaza, technical services, interior maintenance, stretch ceiling Dubai, fitout contractors Dubai, home renovation Dubai, kitchen renovation Dubai, bathroom renovation Dubai, MEP services Dubai, landscaping Dubai, garden renovation Dubai, tiling services Dubai, plumbing services Dubai, wooden flooring Dubai, custom cabinets Dubai" />
+        <meta name="keywords" content="Noor Al Mufaza, technical services, home renovation, interior maintenance, property maintenance, stretch ceiling, fitout contractors, kitchen renovation, bathroom renovation, MEP services, landscaping, garden renovation, tiling services, plumbing services, wooden flooring, custom cabinets, civil works, Dubai" />
         <link rel="canonical" href="https://www.nooralmufaza.com/contact" />
       </Helmet>
       <Helmet>
@@ -64,6 +64,9 @@ export default function ContactDetails() {
         <div className="w-full max-w-2xl bg-white p-8 rounded-2xl shadow-lg grid gap-6 text-left text-[#001362]">
           <div>
             <h4 className="text-lg font-semibold mb-1">Phone Numbers:</h4>
+            <p className="hover:text-[#eaaf47] transition">
+              <a href="tel:+971544027535">+971 54 402 7535</a>
+            </p>
             <p className="hover:text-[#eaaf47] transition">
               <a href="tel:+971545933287">+971 54 593 3287</a>
             </p>

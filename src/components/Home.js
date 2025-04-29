@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import { useState } from "react"; // NEW
-import "../App.css"; 
-import { Link } from "react-router-dom"; 
+import { useState } from "react";
+import "../App.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // NEW
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const services = [
     { title: "Fit-out", image: "/images/fitout.jpg" },
@@ -21,7 +21,7 @@ export default function Home() {
       <Helmet>
         <title>Stretch Ceiling, Fitout, Renovation, Landscaping Services Dubai | Noor Al Mufaza</title>
         <meta name="description" content="Noor Al Mufaza provides expert services in stretch ceiling installation, fitout, MEP, plumbing, painting, tiling, kitchen and bathroom renovation, landscaping, and wooden flooring in Dubai. Contact us for premium renovation solutions." />
-        <meta name="keywords" content="Noor Al Mufaza, technical services, interior maintenance, stretch ceiling Dubai, fitout contractors Dubai, home renovation Dubai, kitchen renovation Dubai, bathroom renovation Dubai, MEP services Dubai, landscaping Dubai, garden renovation Dubai, tiling services Dubai, plumbing services Dubai, wooden flooring Dubai, custom cabinets Dubai" />
+        <meta name="keywords" content="Noor Al Mufaza, technical services, home renovation, interior maintenance, property maintenance, stretch ceiling, fitout contractors, kitchen renovation, bathroom renovation, MEP services, landscaping, garden renovation, tiling services, plumbing services, wooden flooring, custom cabinets, civil works, Dubai" />
         <link rel="canonical" href="https://www.nooralmufaza.com" />
       </Helmet>
       <Helmet>
@@ -41,17 +41,17 @@ export default function Home() {
                 "availableLanguage": "English"
               },
               "sameAs": [
-                "https://www.instagram.com/nooralmufaza",
+                "https://www.instagram.com/nooralmufaza"
               ]
             }
           `}
         </script>
       </Helmet>
- 
+
       {/* Header */}
       <header className="flex items-center justify-between p-6 shadow-md bg-[#e3ecfa] relative">
         <div className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Noor A Mufaza Logo" className="h-12 w-12 object-contain" />
+          <img src="/logo.png" alt="Noor Al Mufaza Technical Services LLC logo Dubai" className="h-12 w-12 object-contain" />
           <div>
             <h1 className="text-2xl font-bold">Noor Al Mufaza</h1>
             <p className="text-sm text-[#001362]">Technical Services LLC</p>
@@ -69,9 +69,9 @@ export default function Home() {
         <button className="md:hidden focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <svg className="w-8 h-8 text-[#001362]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             {isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /> // X icon
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /> // Hamburger
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
@@ -115,9 +115,15 @@ export default function Home() {
               className="p-6 shadow-lg rounded-2xl bg-[#e3ecfa] hover:shadow-xl transition duration-300"
               whileHover={{ scale: 1.05 }}
             >
-              <img src={service.image} alt={service.title} className="w-full h-48 object-cover rounded-md mb-4" />
+              <img 
+                src={service.image} 
+                alt={`Professional ${service.title.toLowerCase()} services in Dubai by Noor Al Mufaza`} 
+                className="w-full h-48 object-cover rounded-md mb-4" 
+              />
               <h4 className="text-xl font-bold text-[#eaaf47] mb-2">{service.title}</h4>
-              <p className="text-[#001362] text-sm">Professional and reliable {service.title.toLowerCase()} services for homes and businesses.</p>
+              <p className="text-[#001362] text-sm">
+                Professional and reliable {service.title.toLowerCase()} services for homes and businesses.
+              </p>
             </motion.div>
           ))}
         </div>
