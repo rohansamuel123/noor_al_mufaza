@@ -77,7 +77,7 @@ export default function ContactDetails() {
           <div>
             <h4 className="text-lg font-semibold mb-1">Email:</h4>
             <p className="hover:text-[#eaaf47] transition">
-              <a href="mailto:nooralmufaza@gmail.com">nooralmufaza@gmail.com</a>
+              <a href="mailto:nooralmufaza@gmail.com">info@nooralmufaza.com</a>
             </p>
           </div>
           <div>
