@@ -3,35 +3,35 @@
   <!-- Home page -->
   <url>
     <loc>https://nooralmufaza.com/</loc>
-    <lastmod>2025-04-27</lastmod>
+    <lastmod>2025-08-09</lastmod>
     <priority>1.00</priority>
   </url>
 
   <!-- Services page -->
   <url>
     <loc>https://nooralmufaza.com/#services</loc>
-    <lastmod>2025-04-27</lastmod>
+    <lastmod>2025-08-09</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- About page -->
   <url>
     <loc>https://nooralmufaza.com/#about</loc>
-    <lastmod>2025-04-27</lastmod>
+    <lastmod>2025-08-09</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- Contact page -->
   <url>
     <loc>https://nooralmufaza.com/#contact</loc>
-    <lastmod>2025-04-27</lastmod>
+    <lastmod>2025-08-09</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- Contact details page -->
   <url>
     <loc>https://nooralmufaza.com/contact-details</loc>
-    <lastmod>2025-05-01</lastmod>
+    <lastmod>2025-08-09</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>

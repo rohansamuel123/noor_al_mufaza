@@ -1,17 +1,16 @@
-import { React } from "react";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from "./components/Home";
-import ContactDetails from "./components/ContactDetails";
-import "./App.css";
+// App.jsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ContactDetails from './pages/ContactDetails'; // your existing contact page
 
 function App() {
   return (
-    <BrowserRouter >
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact-details" element={<ContactDetails />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
