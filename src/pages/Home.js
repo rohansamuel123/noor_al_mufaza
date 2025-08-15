@@ -24,7 +24,7 @@ export default function Home() {
   } = useScrollAnimations();
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#001362] font-sans scroll-smooth overflow-x-hidden">
+    <div className="bg-white text-[#001362] font-sans">
       <Helmet>
         <title>{SEO_DATA.title}</title>
         <meta name="description" content={SEO_DATA.description} />
